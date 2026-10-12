@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akaik</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Spectral:ital,wght@1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<canvas id="bg"></canvas>
+<blockquote id="q" style="margin:0"><p id="qt"></p><cite id="qa">— Джордж Оруэлл</cite></blockquote>
+<main><section class="card">
+<div class="stage"><div id="av"><img src="assets/avatar.jpg" alt="Аватар Akaik"></div></div>
+<div id="hit"><h1 id="nick">Akaik</h1></div>
+<nav class="links">
+<a href="https://github.com/AkaikFFT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0C17.300 5 18.300 5.300 18.300 5.300c.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.200c0 .3.2.7.8.6A11.500 11.500 0 0 0 23.500 12 11.500 11.500 0 0 0 12 .5z"/></svg>GitHub</a>
+<a href="https://t.me/AkaikFFT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.900 3.600 2.700 11c-1.300.5-1.300 1.300-.2 1.600l4.900 1.500 1.900 5.800c.2.600.1.800.7.800.5 0 .7-.2 1-.5l2.400-2.300 4.900 3.600c.9.500 1.500.2 1.800-.8l3.200-15.200c.3-1.300-.5-1.900-1.400-1.500zM8.500 13.600l9.600-6c.5-.3.9-.1.5.2l-7.900 7.100-.3 3.300z"/></svg>Telegram</a>
+</nav></section></main>
+<button id="gear" aria-label="Настройки"><svg viewBox="0 0 24 24"><path d="M19.400 13a7.800 7.800 0 0 0 0-2l2.100-1.600a.5.500 0 0 0 .1-.6l-2-3.500a.5.500 0 0 0-.6-.2l-2.500 1a7.300 7.300 0 0 0-1.700-1l-.4-2.600a.5.500 0 0 0-.5-.4h-4a.5.500 0 0 0-.5.400l-.4 2.600a7.300 7.300 0 0 0-1.700 1l-2.500-1a.5.500 0 0 0-.6.200l-2 3.500a.5.500 0 0 0 .1.600L4.600 11a7.800 7.800 0 0 0 0 2l-2.100 1.600a.5.500 0 0 0-.1.600l2 3.500c.1.200.4.300.6.200l2.500-1c.5.400 1.100.7 1.700 1l.4 2.600c0 .2.200.4.500.4h4c.3 0 .5-.2.500-.4l.4-2.600c.6-.3 1.200-.6 1.700-1l2.500 1c.2.100.5 0 .6-.2l2-3.500a.5.500 0 0 0-.1-.6zM12 15.500a3.500 3.500 0 1 1 0-7 3.500 3.500 0 0 1 0 7z"/></svg></button>
+<button id="music" aria-label="Музыка" title="Lo-fi"><svg viewBox="0 0 24 24"><path d="M12 3v10.600A4 4 0 1 0 14 17V7h4V3z"/></svg></button>
+<div id="mp"><div class="mt">Lo-fi</div><button data-i="0">Полночный дождь</button><button data-i="1">Тёплый кофе</button><button data-i="2">Туман над лесом</button><button data-i="3">Зимний вечер</button><button data-i="4">Первый рассвет</button></div>
+<aside id="panel"><h2>Настройки</h2>
+<div class="row"><span class="lab">Сезон</span><div class="seg" data-k="season"><button data-v="auto">Авто</button><button data-v="summer">Лето</button><button data-v="autumn">Осень</button><button data-v="winter">Зима</button><button data-v="spring">Весна</button></div></div>
+<div class="row"><span class="lab">Время суток</span><div class="seg" data-k="time"><button data-v="auto">Авто</button><button data-v="morning">Утро</button><button data-v="day">День</button><button data-v="evening">Вечер</button><button data-v="night">Ночь</button></div></div>
+<div class="row"><label class="sw"><span id="plab">Дождь</span><input type="checkbox" id="precip"></label>
+<label class="sw"><span>Гроза</span><input type="checkbox" id="storm"></label>
+<span class="lab" style="margin-top:8px">Густота: <b id="dv"></b></span><input type="range" id="dens" min="5" max="100"><div class="hint" id="hint"></div></div>
+</aside>
+<script src="js/state.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/music.js"></script></body></html>
